@@ -1,3 +1,18 @@
-h1{
-    color: red;
+header {
+   
+    .navbar {
+        background-color: $bg_blackish;
+        .nav-wrap {
+            padding: 35px 85px;
+        }
+        .navbar-nav {
+            li {
+                margin: 0 1em;
+                a{
+                    color: $white;
+                    font-size: $link-font-size;
+                }
+            }
+        }
+    }
 }

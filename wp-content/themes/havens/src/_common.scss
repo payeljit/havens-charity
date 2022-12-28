@@ -1,5 +1,24 @@
 body {
-    p{
-        font-family: 'Nunito', sans-serif;
+    p {
+        font-family: $nunito-font;
     }
+    a {
+        &:hover {
+            color: white;
+            text-decoration: none;
+            transition: all .5s ease-in;
+        }
+    }
+}
+
+.btn-haven {
+    background-color: $orange;
+    border-radius: 9000px;
+    font-family: $caveat-font ;
+    color: $black;
+    padding: 2px 30px;
+    font-weight: 400;
+    font-size: 40px;
+    width: 228px;
+    height: 48px;
 }
