@@ -26,18 +26,10 @@
     }
     add_action('wp_enqueue_scripts', 'load_js');
 
-    //Register menu
-    // function register_my_menus() {
-    //     register_nav_menus(
-    //       array(
-    //         'header-menu' => __( 'Header Menu' ),
-    //         'extra-menu' => __( 'Extra Menu' )
-    //        )
-    //      );
-    //    }
-    //    add_action( 'init', 'register_my_menus' );
+    //Register navwalker menu
     register_nav_menus( array(
         'primary' => __( 'Primary Menu', 'havens' ),
+        'secondary' => __( 'Footer Menu', 'havens' ),
     ) );
 
      
@@ -47,5 +39,14 @@
         require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
     }
     add_action( 'after_setup_theme', 'register_navwalker' );
+
+ //Allow svfg
+      function enable_svg_upload( $upload_mimes ) {
+        $upload_mimes['svg'] = 'image/svg+xml';
+        $upload_mimes['svgz'] = 'image/svg+xml';
+        return $upload_mimes;
+    }
+    add_filter( 'upload_mimes', 'enable_svg_upload', 10, 1 );
+    
 ?>
 

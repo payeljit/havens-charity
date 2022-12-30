@@ -1,13 +1,29 @@
 body {
+    p, a{
+        font-size: $font-default;
+    }
     p {
         font-family: $nunito-font;
+        
+    }
+    h1,h2,h3,h4,h5 {
+        font-family: $caveat-font ;
     }
     a {
         &:hover {
-            color: white;
+            color: $orange;
             text-decoration: none;
             transition: all .5s ease-in;
         }
+    }
+    h1 {
+        font-size: 150px;
+    }
+    h2{
+        font-size: 80px;
+    }
+    h3 {
+        font-size: 43px;
     }
 }
 
@@ -21,4 +37,48 @@ body {
     font-size: 40px;
     width: 228px;
     height: 48px;
+}
+
+.module-wrapper {
+}
+
+.twin-block {
+
+    height: 583px;
+    border-radius: 20px;
+}
+
+// Font
+.carvet-font {
+    font-family: $caveat-font;
+}
+//Colors
+
+.orange {
+    color: $orange;
+}
+.bg-orange {
+    background-color: $orange;
+}
+.border-b-orange {
+    border-bottom: 1px solid $orange;
+}
+.bg_lighter_grey {
+    background-color: $lighter_grey;
+}
+.black {
+    color: $black;
+}
+.p-6 {
+    padding: 75px;
+}
+
+.font-x-small {
+    font-size: 17px;
+}
+.font-small {
+    font-size: 20px;
+}
+.font-medium {
+    font-size: 27px;
 }

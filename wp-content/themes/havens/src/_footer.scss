@@ -1,3 +1,24 @@
-h1{
-    color: red;
+footer {
+    background-color: $black;
+    a, p, div{
+        color: $light-grey; 
+        font-size: $font-default;
+    }
+    li{
+        list-style-type: none;
+    }
+    .menu {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 5fr 5fr;
+    }
+    .copyright{
+        font-size: $font-small;
+    }
 }
+
+@media(max-width: 400px){
+    footer .menu {  grid-template-columns: 1fr;
+    
+    }
+  }
