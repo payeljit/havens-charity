@@ -3,13 +3,13 @@ header {
     .navbar {
         background-color: $bg_blackish;
         .nav-wrap {
-            padding: 35px 85px;
+            padding: $padding-general;
         }
         .navbar-nav {
             li {
                 margin: 0 1em;
                 a{
-                    color: $white;
+                    color: $white !important;
                     font-size: $link-font-size;
                 }
             }

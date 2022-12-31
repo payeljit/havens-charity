@@ -1,0 +1,24 @@
+{
+  "name": "havens-charity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/payeljit/havens-charity.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/payeljit/havens-charity/issues"
+  },
+  "homepage": "https://github.com/payeljit/havens-charity#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "brei-sass-mixins": "^2.1.1",
+    "sass": "^1.57.1"
+  }
+}

@@ -17,8 +17,10 @@ footer {
     }
 }
 
-@media(max-width: 400px){
+@media(max-width: 600px){
     footer .menu {  grid-template-columns: 1fr;
-    
+    }
+    .curl-arrow {
+        top: 89%;
     }
   }

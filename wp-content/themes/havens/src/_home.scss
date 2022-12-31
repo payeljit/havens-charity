@@ -1,9 +1,18 @@
-
-.bg-dark {
+.banner {
+    h1 {
+        padding: 0 85px;
+        max-width: 70%;
+    }
+}
+.bg-section-dark {
     a, p{
        color: $white;
     }
     h3 {
         color: $orange;
     }
+}
+.curl-arrow{
+    right: 8%;
+    top: 78%;
 }

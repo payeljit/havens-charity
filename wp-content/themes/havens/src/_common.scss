@@ -9,7 +9,7 @@ body {
     h1,h2,h3,h4,h5 {
         font-family: $caveat-font ;
     }
-    a {
+    a, .navbar-nav a {
         &:hover {
             color: $orange;
             text-decoration: none;
@@ -32,14 +32,10 @@ body {
     border-radius: 9000px;
     font-family: $caveat-font ;
     color: $black;
-    padding: 2px 30px;
     font-weight: 400;
     font-size: 40px;
     width: 228px;
     height: 48px;
-}
-
-.module-wrapper {
 }
 
 .twin-block {
@@ -66,10 +62,21 @@ body {
 .bg_lighter_grey {
     background-color: $lighter_grey;
 }
+.bg-blackish {
+    background: $bg_blackish;
+}
+.bg-semi-black {
+    background: rgba($black, 0.8);
+}
 .black {
     color: $black;
 }
-.p-6 {
+.grey {
+    color: $grey;
+}
+.p-6, 
+.py-6,  
+.py-6{
     padding: 75px;
 }
 
@@ -81,4 +88,16 @@ body {
 }
 .font-medium {
     font-size: 27px;
+}
+.padding-general {
+    padding: $padding-general;
+}
+.l-0{
+    left: 0;
+}
+.z-index-1 {
+    z-index: 1;
+}
+.border-r-20 {
+    border-radius: 20px;
 }
