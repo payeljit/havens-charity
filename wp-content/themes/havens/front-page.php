@@ -19,6 +19,7 @@
     </div>
         <?php 
             include('templates/sponsors-lists.php'); 
+            include('templates/footer-banner.php'); 
         ?>
 
 <?php get_footer(); ?>

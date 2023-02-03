@@ -211,25 +211,33 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
 			}
 
 			// If the item has_children add atts to <a>.
-			if ( $this->has_children && 0 === $depth ) {
-				$atts['href']          = '#';
-				$atts['data-toggle']   = 'dropdown';
-				$atts['aria-expanded'] = 'false';
-				$atts['class']         = 'dropdown-toggle nav-link';
-				$atts['id']            = 'menu-item-dropdown-' . $item->ID;
-			} else {
-				if ( true === $this->has_schema ) {
-					$atts['itemprop'] = 'url';
-				}
+			// If item has_children add atts to a.
+if ( $args->has_children && $depth === 0 ) {
+	$atts['href'] = ! empty( $item->url ) ? $item->url : '';
+	//$atts['data-toggle']   = 'dropdown';
+	$atts['class']           = 'dropdown-toggle';
+ } else {
+	$atts['href'] = ! empty( $item->url ) ? $item->url : '';
+ }
+			// if ( $this->has_children && 0 === $depth ) {
+			// 	$atts['href']          = '#';
+			// 	$atts['data-toggle']   = 'dropdown';
+			// 	$atts['aria-expanded'] = 'false';
+			// 	$atts['class']         = 'dropdown-toggle nav-link';
+			// 	$atts['id']            = 'menu-item-dropdown-' . $item->ID;
+			// } else {
+			// 	if ( true === $this->has_schema ) {
+			// 		$atts['itemprop'] = 'url';
+			// 	}
 
-				$atts['href'] = ! empty( $item->url ) ? $item->url : '#';
-				// For items in dropdowns use .dropdown-item instead of .nav-link.
-				if ( $depth > 0 ) {
-					$atts['class'] = 'dropdown-item';
-				} else {
-					$atts['class'] = 'nav-link';
-				}
-			}
+			// 	$atts['href'] = ! empty( $item->url ) ? $item->url : '#';
+			// 	// For items in dropdowns use .dropdown-item instead of .nav-link.
+			// 	if ( $depth > 0 ) {
+			// 		$atts['class'] = 'dropdown-item';
+			// 	} else {
+			// 		$atts['class'] = 'nav-link';
+			// 	}
+			// }
 
 			$atts['aria-current'] = $item->current ? 'page' : '';
 

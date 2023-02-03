@@ -22,6 +22,8 @@
         wp_enqueue_script('jquery');
         wp_register_script('bootstrap', get_template_directory_uri() . '/dist/js/bootstrap/bootstrap.min.js', 'jquery', false, true);
         wp_enqueue_script('bootstrap');
+        wp_register_script('custom-js', get_template_directory_uri() . '/dist/js/custom.js', array(), false);
+        wp_enqueue_script('custom-js');
 
     }
     add_action('wp_enqueue_scripts', 'load_js');
@@ -41,12 +43,14 @@
     add_action( 'after_setup_theme', 'register_navwalker' );
 
  //Allow svfg
-      function enable_svg_upload( $upload_mimes ) {
-        $upload_mimes['svg'] = 'image/svg+xml';
-        $upload_mimes['svgz'] = 'image/svg+xml';
-        return $upload_mimes;
-    }
-    add_filter( 'upload_mimes', 'enable_svg_upload', 10, 1 );
+    //   function enable_svg_upload( $upload_mimes ) {
+    //     $upload_mimes['svg'] = 'image/svg+xml';
+    //     $upload_mimes['svgz'] = 'image/svg+xml';
+    //     return $upload_mimes;
+    // }
+    // add_filter( 'upload_mimes', 'enable_svg_upload', 10, 1 );
+
+    
     
 ?>
 

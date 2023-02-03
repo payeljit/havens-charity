@@ -1,18 +1,33 @@
-header {
-   
-    .navbar {
-        background-color: $bg_blackish;
-        .nav-wrap {
-            padding: $padding-general;
+.navbar {
+    background-color: $bg_blackish;
+    .nav-wrap {
+        padding: $padding-general;
+    }
+    .navbar-nav {
+        li {
+            margin: 0 1em;
+            a{
+                color: $white ;
+                font-size: $link-font-size;
+            }
         }
-        .navbar-nav {
+        .dropdown-menu {
+            background: rgba($orange, 0.8);
+            margin: 0;
             li {
-                margin: 0 1em;
-                a{
-                    color: $white !important;
-                    font-size: $link-font-size;
+                margin: 0.5em 1em;
+            }
+            li a {
+                color: $white;
+                padding: 0;
+                font-size: $font-small;
+
+                &:hover {
+                    color: rgba($white, 0.8);
                 }
             }
         }
     }
 }
+
+

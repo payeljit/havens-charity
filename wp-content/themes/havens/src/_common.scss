@@ -1,13 +1,15 @@
 body {
-    p, a{
+    p, a, li{
         font-size: $font-default;
     }
     p {
         font-family: $nunito-font;
-        
     }
     h1,h2,h3,h4,h5 {
         font-family: $caveat-font ;
+    }
+    a{
+        color: $orange;
     }
     a, .navbar-nav a {
         &:hover {
@@ -36,11 +38,21 @@ body {
     font-size: 40px;
     width: 228px;
     height: 48px;
+    &:hover {
+
+        color: $white;
+    }
+}
+.btn-white {
+    background: white;
+    padding: 20px 65px;
+    border-radius: 50px;
+    text-align: center;
 }
 
 .twin-block {
 
-    height: 583px;
+    // height: 583px;
     border-radius: 20px;
 }
 
@@ -74,6 +86,9 @@ body {
 .grey {
     color: $grey;
 }
+.semi-grey {
+    color: $semi-grey;
+}
 .p-6, 
 .py-6,  
 .py-6{
@@ -100,4 +115,9 @@ body {
 }
 .border-r-20 {
     border-radius: 20px;
+}
+
+blockquote {
+    border-left: 8px solid $orange;
+    padding-left: 10px;
 }
